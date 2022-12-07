@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 
 // надо будет заменить на dist/
-app.use(express.static('./src/pages'));
+app.use(express.static(__dirname + '/dist'));
 
 app.get('/', (req, res) => {
     res.render('index');
